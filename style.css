@@ -1,0 +1,421 @@
+/* ========== 全局基础样式 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* 容器居中+防止溢出 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========== 导航栏样式 ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    flex-wrap: wrap; /* 移动端换行 */
+    gap: 15px;
+}
+
+.navbar-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* 按钮换行 */
+}
+
+.white-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+    transition: all 0.2s ease;
+    white-space: nowrap; /* 按钮文字不换行 */
+}
+
+.white-btn:hover {
+    background: #eff6ff;
+    transform: translateY(-1px);
+}
+
+.white-btn.active {
+    background: #3b82f6;
+    color: #fff;
+}
+.white-btn.active:hover {
+    background: #2563eb;
+}
+
+/* ========== 主页标题样式 ========== */
+.hero {
+    padding: 80px 0 60px;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-title .name {
+    color: #3b82f6;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* ========== 关于我板块 ========== */
+.story-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: #3b82f6;
+}
+
+.story-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.story-avatar {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.story-avatar img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.story-content {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+/* ========== 项目展示板块 ========== */
+.projects-section {
+    padding: 60px 0;
+    background: #f9fafb;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.project-icon {
+    width: 56px;
+    height: 56px;
+    background: #eff6ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.project-desc {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b82f6;
+}
+
+.project-link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* ========== 荣誉证书板块（9个模块） ========== */
+.certificates-section {
+    padding: 60px 0;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px; /* 增大卡片间距，避免放大后重叠 */
+}
+
+.certificate-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    position: relative; /* 让图片基于卡片定位 */
+    z-index: 1; /* 默认层级 */
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 10; /* 悬停时提升层级，显示在最上层 */
+}
+
+.certificate-img {
+    width: 100%;
+    height: 180px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* 移除overflow: hidden，让图片可以超出容器 */
+}
+
+.certificate-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.4s ease; /* 延长动画时间，更丝滑 */
+}
+
+/* 核心：鼠标悬停图片放大1.8倍，居中显示 */
+.certificate-card:hover .certificate-img img {
+    transform: scale(1.8); /* 放大1.8倍，效果更明显 */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* 加重阴影，突出图片 */
+    border-radius: 10px;
+}
+
+.certificate-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.certificate-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* ========== 联系方式板块 ========== */
+.contact-section {
+    background: #111827;
+    color: #fff;
+    padding: 80px 0;
+    margin-top: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-desc {
+    color: #9ca3af;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    flex: 1;
+    min-width: 200px;
+    background: #1f2937;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    background: #374151;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    font-size: 24px;
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 5px;
+}
+
+.contact-value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #374151;
+}
+
+.contact-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-logo span {
+    color: #3b82f6;
+}
+
+.contact-slogan {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* ========== 版权信息 ========== */
+.copyright {
+    background: #111827;
+    color: #6b7280;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #1f2937;
+}
+
+/* ========== 移动端适配 ========== */
+@media (max-width: 768px) {
+    .story-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .story-avatar {
+        max-width: 100%;
+    }
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    /* 移动端缩小放大倍数，避免占满屏幕 */
+    .certificate-card:hover .certificate-img img {
+        transform: scale(1.3);
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+    .navbar {
+        padding: 15px 0;
+    }
+    .navbar-menu {
+        justify-content: center;
+        width: 100%;
+    }
+    .hero {
+        padding: 40px 0 30px;
+    }
+    .contact-section {
+        padding: 60px 0;
+    }
+}
