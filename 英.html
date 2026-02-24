@@ -4,30 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chen Ruiyang - Personal Profile Website</title>
-    <!-- 引入第三方图标库 -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 直接引入同目录下的style.css，无需文件夹路径 -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 - 替换为3个跳转按钮 -->
     <nav class="navbar container">
         <div class="navbar-logo">Chen Ruiyang</div>
         <div class="navbar-menu">
-            <!-- 新添加的3个跳转按钮，你可以修改href和按钮文字 -->
             <a href="index.html" class="white-btn" target="_blank">中文</a>
             <a href="英.html" class="white-btn" target="_blank">English</a>
             <a href="韩.html" class="white-btn" target="_blank">한국인</a>
         </div>
     </nav>
 
-    <!-- 主页标题区域 -->
     <section id="home" class="hero container">
         <h1 class="hero-title">Hello, I am <span class="name">Ruiyang（陈睿阳）</span></h1>
         <p class="hero-subtitle">Shanghai secondary vocational school students|Two silver and one bronze medals were awarded at the 2025 China International College Student Innovation Competition.”</p>
     </section>
 
-    <!-- 关于我板块 -->
     <section id="story" class="story-section container">
         <h2 class="section-title">About me</h2>
         <div class="story-wrapper">
@@ -46,7 +41,6 @@
         </div>
     </section>
 
-    <!-- 项目展示板块 -->
     <section id="projects" class="projects-section container">
         <h2 class="section-title">Project Showcase</h2>
         <div class="projects-grid">
@@ -56,7 +50,7 @@
                 </div>
                 <h3 class="project-name">AIOT website</h3>
                 <p class="project-desc">This is a website I built to showcase my competition project during the 2025 China International College Student Innovation Competition. It is implemented using HTML/CSS/JavaScript.It includes sections for team introduction, project introduction, project showcase, and technology demonstration, and is compatible with both mobile and desktop devices with a simple and modern style.</p>
-                <a href="https://cry-nb666.github.io/AIot/" class="project-link" target="_blank">
+                <a href="https://chen-ruiyang.github.io/AIot/" class="project-link" target="_blank">
                     <span>View website</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
@@ -64,11 +58,10 @@
         </div>
     </section>
 
-    <!-- 荣誉证书板块-->
     <section id="certificates" class="certificates-section container">
         <h2 class="section-title">My Honors and Certificates</h2>
         <div class="certificates-grid">
-            <!-- 模块 -->
+
             <div class="certificate-card">
                 <div class="certificate-img">
                     <img src="优胜.jpg" alt="上海市职业院校创新创意大赛优胜奖">
@@ -159,7 +152,6 @@
         </div>
     </section>
 
-    <!-- 联系方式板块 -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-wrapper">
@@ -204,17 +196,17 @@
         </div>
     </section>
 
-    <!-- 版权信息 -->
     <div class="copyright">© 2026 Chen Ruiyang（陈睿阳） all rights reserved</div>
 
     <script>
-        // 移除原有的导航高亮逻辑（因为不再需要锚点跳转）
+
         document.addEventListener('DOMContentLoaded', function() {
-            // 仅保留基础初始化，移除滚动监听逻辑
+
             const navLinks = document.querySelectorAll('.white-btn');
-            // 初始化：默认第一个按钮高亮
+
             navLinks[0].classList.add('active');
         });
     </script>
 </body>
+
 </html>
